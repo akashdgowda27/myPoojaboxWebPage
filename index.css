@@ -1,0 +1,982 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: white; 
+    height: 10vh; 
+}
+
+.logo {
+    flex: 0 0 15%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.logo img {
+    max-height: 100%; 
+    width: 70%;
+    margin-bottom: 2vh;
+}
+
+.nav1 {
+    flex-grow: 1; 
+}
+
+.nav1 ul {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav1 li {
+    position: relative; 
+    margin: 0 2vw; 
+}
+
+.nav1 a {
+    color: black; 
+    text-decoration: none; 
+    padding: 1.5vh 1vw; 
+}
+
+.nav1 a:hover {
+    text-decoration: underline; 
+}
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 100px; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.dropdown-option {
+    padding: 1vh 1vw;
+    color: black;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-grow: 1; 
+}
+
+.nav2 ul {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: flex-start; 
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav2 li {
+    text-align: center; 
+    color: black; 
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .nav1 ul {
+        flex-direction: column;
+    }
+
+    .nav2 ul {
+        flex-direction: row; 
+        justify-content: center; 
+    }
+
+    .nav1, .nav2 {
+        width: 100%; 
+    }
+
+    .logo {
+        margin-bottom: 1vh; 
+    }
+}
+
+/* -----------------video-link-part------------------- */
+.video-link-part {
+    height: 100vh; 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.video-link-part video {
+    height: 100%; 
+    width: 100%;
+    object-fit: cover; 
+}
+
+
+@media (max-width: 768px) {
+    .video-link-part {
+        height: 70vh; 
+    }
+}
+
+@media (max-width: 480px) {
+    .video-link-part {
+        height: 50vh; 
+    }
+
+    .video-link-part video {
+        object-fit: contain; 
+    }
+}
+
+/* ---------------------carousal part---------------------- */
+
+.carousel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto; 
+    cursor: pointer;
+    padding: 3vh 0; 
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 12.5%; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 0;
+}
+
+
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+
+@media (max-width: 1200px) {
+    .carousel-item {
+        min-width: 25%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 33.33%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        min-width: 50%; 
+    }
+}
+
+/* ------------diwali gift boxes---------------------------------- */
+.offers{
+    width: 100%;
+    border: none;
+    margin-top: 3vh;
+}
+.offers b{
+    font-size: 20px;
+    text-align: start;
+    padding-left: 10px;
+}
+.offers button{
+    width: 7vw;
+    height: 5vh;
+    background: rgba(197, 18, 53, 0.916);
+    border: none;
+    float: right;
+    margin-right: 1.5vw;   
+}
+button a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.cards-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5vh;
+    flex-wrap: wrap; 
+}
+.cards-container .cards{
+    width: 15%;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    display: grid;
+    position: relative;
+}
+.wishlist-btn {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.cards-container .cards .card-up {
+    position: relative; 
+    height: 30vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.cards-container .cards .card-up p{
+    color: white;
+    font-size: 18px;
+    z-index: +3;
+    position: absolute;
+    top: 85%;
+    left: 20%;
+    text-shadow: 0p 15px 25px black;
+}
+.cards-container .cards .c1{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC09708_copy_713x.jpg?v=1728504233");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .c1:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC09704_copy_225x.jpg?v=1728504245");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .c2{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC09701_copy_713x.jpg?v=1728504287");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .c2:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC09698_copy_225x.jpg?v=1728504278");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .c3{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC09718_copy_713x.jpg?v=1728504190");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .c3:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC09715_copy_225x.jpg?v=1728504315");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .c4{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC02446copy_713x.jpg?v=1661250361");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .c4:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC02437copy_225x.jpg?v=1661250356");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .c5{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_2498_900x.jpg?v=1721022877");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .c5:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_2499_225x.jpg?v=1721022863");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .c6{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC02725copy_713x.jpg?v=1661428902");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .c6:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC02721copy_225x.jpg?v=1661428898");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+
+.cards-container .cards .card-mid {
+    width: 100%;
+    height: 5vh;
+    font-size: 14px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: flex; 
+    justify-content: center;
+}
+
+.cards-container .cards button{
+    width: 100%;
+    height: 5vh;
+    background: crimson;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+
+@media (max-width: 1200px) {
+    .cards-container .cards {
+        width: 20%; 
+    }
+}
+
+@media (max-width: 992px) {
+    .cards-container .cards {
+        width: 30%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container .cards {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container .cards {
+        width: 90%; 
+    }
+}
+
+/* ----------------------------Diwali Decor---------------------------- */
+.cards-container .cards .d1{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC00654copy_23553b03-60d0-4712-87d4-c9347cbd20b7_900x.jpg?v=1708432975");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .d1:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC09821copy_225x.jpg?v=1708432975");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .d2{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC06247copy_713x.jpg?v=1697718627");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .d2:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC06247copy_225x.jpg?v=1697718627");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .d3{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/S_713x.jpg?v=1704316271");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .d3:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/M_225x.jpg?v=1704316209");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .d4{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/IMG_2484_713x.jpg?v=1701177770");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .d4:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/IMG_2484_225x.jpg?v=1701177770");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .d5{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5460-Edit_900x.jpg?v=1728173404");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .d5:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5457-Edit_225x.jpg?v=1728173432");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .d6{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_1895_600x.jpg?v=1698409242");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .d6:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_1895_225x.jpg?v=1698409242");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+/* ----------------------------Karwa Chauth---------------------------- */
+.cards-container .cards .k1{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5413-Edit_900x.jpg?v=1727834105");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .k1:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5415-Edit_225x.jpg?v=1727833852");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .k2{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5618-2_900x.jpg?v=1728879227");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .k2:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5616-2_225x.jpg?v=1728879243");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .k3{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5607_900x.jpg?v=1728879231");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .k3:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5607_900x.jpg?v=1728879231");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .k4{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_4421-Edit_900x.jpg?v=1726745015");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .k4:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_4416-Edit_225x.jpg?v=1726744946");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .k5{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5376-Edit_900x.jpg?v=1727834012");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .k5:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_5384-Edit_225x.jpg?v=1727833708");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .k6{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC03885copy_713x.jpg?v=1664656851");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .k6:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC03885copy_225x.jpg?v=1664656851");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+/* ----------------------------Healing Crystals---------------------------- */
+.cards-container .cards .h1{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_5029_900x.jpg?v=1596549393");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .h1:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC02248copy_225x.jpg?v=1711692921");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .h2{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_5047_900x.jpg?v=1596550201");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .h2:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_5653_d8396d94-c407-46b6-afc2-1ca55493483a_225x.jpg?v=1599141578");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .h3{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC_1643_900x.jpg?v=1719459454");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .h3:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC01797copy_225x.jpg?v=1723274979");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .h4{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_5895_900x.jpg?v=1711459742");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .h4:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC01688copy_225x.jpg?v=1711459742");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .h5{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_5050_900x.jpg?v=1596549389");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards-container .cards .h5:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/files/DSC02251copy_225x.jpg?v=1711692847");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .h6{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_5145_82b6d0ed-1b63-428a-aecd-db1a906d5234_900x.jpg?v=1622485948");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.cards-container .cards .h6:hover{
+    width: 100%;
+    height:30vh ;
+    background-image: url("https://www.mypoojabox.in/cdn/shop/products/DSC_4202_0de7e9a7-a8f8-4221-8c6b-55684a3a122f_225x.jpg?v=1621511157");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+
+
+/* --------------------------------paragraph------------------------------------ */
+
+.content {
+    display: block; 
+    max-height: 6em; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease; 
+}
+
+.content.expanded {
+    max-height: none; 
+}
+
+.para {
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+.read-more-btn {
+    margin-top: 10px; 
+    cursor: pointer;
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+}
+
+.para button{
+    margin: 10px;
+    width: 10vw;
+    height: 5vh;
+    color: red;
+    border: none;
+}
+
+.read-more-btn:hover {
+    background-color: #e1e1e1;
+}
+
+/* -------------------export--------------------- */
+.export {
+    width: 100%;
+    margin-top: 4vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 1px gray;
+    padding: 1rem;
+}
+
+.export .box {
+    flex: 1 1 200px;
+    display: grid;
+    place-items: center;
+    margin: 1rem;
+    min-width: 150px;
+}
+
+.box ul li {
+    margin: 2vh 0;
+    list-style: none;
+    text-align: center;
+}
+
+.box ul li i {
+    margin: 2px 0;
+    font-size: 2rem;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .export {
+        justify-content: center;
+    }
+
+    .export .box {
+        flex: 1 1 150px; 
+    }
+
+    .box ul li i {
+        font-size: 1.5rem; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .export {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .export .box {
+        width: 80%; 
+    }
+
+    .box ul li {
+        margin: 1.5vh 0; 
+    }
+
+    .box ul li i {
+        font-size: 1.2rem; 
+    }
+}
+
+/* ----------------------------------foooter----------------------------------- */
+footer {
+    background: pink;
+    width: 100%;
+    padding: 20px 0; 
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.footer-box {
+    flex: 1 1 25%; 
+    padding: 10px;
+    box-sizing: border-box; 
+}
+.footer-box image{
+    width: 60%;
+    height: 80vh;
+    background: pink;
+}
+
+.footer-box h2 {
+    margin-bottom: 10px; 
+}
+
+.footer-box ul {
+    padding: 3px; 
+    list-style-type: none; 
+}
+.footer-box ul li{
+    margin: 5px 0;
+}
+.footer-box ul li a{
+    text-decoration: none;
+    color: black;
+}
+.footer-box ul li a:hover{
+    text-decoration: underline;
+}
+.footer-box p{
+    margin: 10px 0;
+}
+.footer-box .btn-cont{
+    display: flex;
+}
+.footer-box button {
+    width: 45%; 
+    height: 6vh;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px; 
+    align-items: center;
+    background: pink;
+    font-size: 17px;
+    color: white;
+}
+
+.footer-container .footer-box:last-child {
+    margin-right: 0; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-box {
+        flex: 1 1 45%; 
+    }
+
+    footer {
+        height: auto; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-box {
+        flex: 1 1 100%; 
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-box button {
+        width: auto;
+        height: 40px; 
+    }
+}
+
+
+footer btn-cont{
+    width: 30%;
+    display: flex;
+}
+
+footer button {
+    width: 30vw; 
+    height: 6vh;
+    margin: 10px 1%; 
+    background: black;
+    color: white;
+}
+footer btn-cont button i{
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+    footer button {
+        width: 30%; 
+        margin: 5px 0; 
+    }
+}
