@@ -220,7 +220,7 @@ nav {
 
 @media (max-width: 480px) {
     .carousel-item {
-        min-width: 50%; 
+        min-width: 20%; 
     }
 }
 
